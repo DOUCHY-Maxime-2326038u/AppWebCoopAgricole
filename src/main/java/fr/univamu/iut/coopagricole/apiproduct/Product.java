@@ -1,7 +1,8 @@
-package fr.univamu.fr.panier;
+package fr.univamu.iut.coopagricole.apiproduct;
 
 import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.json.bind.annotation.JsonbProperty;
+
 
 public class Product {
 
@@ -9,18 +10,17 @@ public class Product {
     protected String type;
 
     @JsonbCreator
-    public Product(@JsonbProperty("name") String name,
-                   @JsonbProperty("type") String type) {
+    public Product(@JsonbProperty("name") String name, @JsonbProperty("type") String type) {
         this.name = name;
         this.type = type;
     }
 
-    public String getName() {
+    public String getNom() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNom(String nom) {
+        this.name = nom;
     }
 
     public String getType() {
